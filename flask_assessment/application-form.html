@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Application Form{% endblock %}
+    <link rel="stylesheet" href="/static/styles.css">
+
+{% block content %}
+    <h1>Application Form</h1>
+        <p>To ensure prompt processing of your application, please complete the form below:</p>
+        <form action="/application" method="POST">
+            <label for="firstname">What is your first name?</label>
+                <input id="firstname" type="text" name="firstname"><br>
+                <br>
+            <label for="lastname">What is your last name?</label>
+                <input id="lastname" type="text" name="lastname"><br>
+                <br>
+            <label for="salaryreq">What is your salary requirement in dollars per year?</label>
+                <input id="salaryreq" type="number" name="salaryreq" min="30000" max="150000"><br>
+                <br>
+            <fieldset>
+            <legend>Which position are you applying for?</legend>
+                <input id="softwareengineer" type="radio" name="position" value="Software Engineer">
+                <label for="softwareengineer">Software Engineer</label><br>
+                <input id="qaengineer" type="radio" name="position" value="QA Engineer">
+                <label for="qaengineer">QA Engineer</label><br>
+                <input id="productmanager" type="radio" name="position" value="Product Manager">
+                <label for="productmanager">Product Manager</label><br>
+            </fieldset>
+            <br>
+            <input type="submit" name="Submit" value="Submit">
+        </form>
+{% endblock %}
