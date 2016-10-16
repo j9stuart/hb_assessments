@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>Skills-HTML-CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Application Form</h1>
+        <p>To ensure prompt processing of your application, please complete the form below:</p>
+        <form action="/application" method="POST">
+            <label for="firstname">What is your first name?</label>
+                <input id="firstname" type="text" name="firstname"><br>
+                <br>
+            <label for="lastname">What is your last name?</label>
+                <input id="lastname" type="text" name="lastname"><br>
+                <br>
+            <label for="salaryreq">What is your salary requirement?</label>
+                <input id="salaryreq" type="text" name="salaryreq"><br>
+                <br>
+            <fieldset>
+            <legend>Which position are you applying for?</legend>
+                <input id="softwareengineer" type="radio" name="position" value="softwareengineer">
+                <label for="softwareengineer">Software Engineer</label><br>
+                <input id="qaengineer" type="radio" name="position" value="qaengineer">
+                <label for="qaengineer">QA Engineer</label><br>
+                <input id="productmanager" type="radio" name="position" value="productmanager">
+                <label for="productmanager">Product Manager</label><br>
+            </fieldset>
+            <br>
+            <input type="submit" name="Submit" value="Submit">
+        </form>
+</body>
+</html>
